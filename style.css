@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #08001f, #30197d);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+.container{
+    width: 50%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+ 
+}
+
+.clock{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(235, 0, 255, 0.11);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    z-index: 2;
+    backdrop-filter: blur(40px);
+}
+
+.container::before{
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: #f41b75bd;
+    border-radius: 5px;
+    position: absolute;
+    left: -4rem;
+    top: -5rem;
+    z-index: 1;
+}
+
+.container::after{
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: #419aff;
+    border-radius: 80px;
+    position: absolute;
+    right: -4rem;
+    bottom: -5rem;
+    z-index: 1;
+}
+
+
+.clock span{
+    display: inline-block;
+    font-size: 4rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.clock span::after{
+    font-size: 16px;
+    position: absolute;
+    bottom: -1.2rem;
+    z-index: 3;
+}
+
+#hrs::after{
+    content: "Hours";
+}
+
+#min::after{
+    content: "MIN";
+}
+
+#sec::after{
+    content: "SEC";
+}
+
+
+
+
+@media (max-width: 430px) {
+    .clock span{
+        font-size: 1.5rem;
+    }
+
+    #hrs::after{
+        content: "Hours";
+        font-size: 0.9rem;
+    }
+    
+    #min::after{
+        content: "MIN";
+        font-size: 0.9rem;
+    }
+    
+    #sec::after{
+        content: "SEC";
+        font-size: 0.9rem;
+    }
+
+    .clock{
+    
+        height: 50%;
+    }
+
+ }
+
+
+@media (min-width: 431px) and (max-width: 767.98px) {
+    .clock span{
+        
+        font-size: 3.5rem;
+        
+    }
+    
+
+}
